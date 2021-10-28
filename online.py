@@ -1,8 +1,10 @@
 import subprocess
 
-def netCon():
-    ms = str(subprocess.Popen("ping 8.8.8.8 -c 1 -t 5",shell=True, stdout=subprocess.PIPE).stdout.read())
-    if ms.find("time=")!=-1:
-        print("OFFLINE")
-    else:
-        print("ONLINE")
+ms = str(subprocess.Popen("ping 8.8.8.8 -c 4",shell=True, stdout=subprocess.PIPE).stdout.read())
+#print(ms)
+if ms.find("time=")==-1:
+    #print(ms.find("time="))
+    print("OFFLINE")
+else:
+    #print(ms.find("time="))
+    print("ONLINE")

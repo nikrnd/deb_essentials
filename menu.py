@@ -1,4 +1,4 @@
-from re import escape
+import os
 import menu_items
 import packages
 
@@ -39,6 +39,7 @@ def menu():
         text = input("\nSelect: ")
 
         if text == "q":
+            os.system("clear")
             exit(0)
         elif text == "i":
             packages.install()

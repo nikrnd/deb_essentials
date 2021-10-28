@@ -13,7 +13,7 @@ switcher = [
     "nano /etc/dhcpcd.confs",
     "route",
     "dig +short myip.opendns.com @resolver1.opendns.com",
-    dir,
+    "python3 " + dir + "/online.py",
     "nano /etc/dnsmasq.conf",
     "service dnsmasq restart",
     "nano /etc/hosts"
